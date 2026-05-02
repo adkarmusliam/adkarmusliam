@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+     <meta name="Description" content="اذكار، أذكار، الأذكار، دعاء، ادعية، أدعية، ذكر، تسبيح، تسابيح، سبحة، سبح، اذكار الصباح، اذكار المساء، اذكار الصباح والمساء اليومية، الأذكار، اذكار المسلم، اذكار الصلاة، اذكار الوضوء، اذكار النوم، اذكار الاستيقاظ، اذكار الطعام، اذكار التشهد، اذكار الخلاء، اذكار المسجد، اذكار الآذان، اذكار المنزل، دعاء ختم القرآن الكريم، اذكار عظيمة، أذكار الحج والعمرة، أدعية نبوية، الأدعية القرآنية، فضل الدعاء، فضل الذكر، فضائل السور، جوامع الدعاء،أذكار بعد الصلاة، أسماء الله الحسنى، الرُّقية الشرعية، الرُّقية الشرعية من القرآن والسن، أدعية للميّت، أدعية للمتوفى، أدعية للمتوفية، أزهر، الأزهر،إفتاء،دار الإفتاء، Azkar, Athkar, Alathkar, Doaa, Muslim daily blessings. Azkar Al Muslim. Athkar Al Muslim">
+     <meta name="Keywords" content="اذكار، أذكار، الأذكار، دعاء، ادعية، أدعية، ذكر، تسبيح، تسابيح، سبحة، سبح، اذكار الصباح، اذكار المساء، اذكار الصباح والمساء اليومية، الأذكار، اذكار المسلم، اذكار الصلاة، اذكار الوضوء، اذكار النوم، اذكار الاستيقاظ، اذكار الطعام، اذكار التشهد، اذكار الخلاء، اذكار المسجد، اذكار الآذان، اذكار المنزل، دعاء ختم القرآن الكريم، اذكار عظيمة، أذكار الحج والعمرة، أدعية نبوية، الأدعية القرآنية، فضل الدعاء، فضل الذكر، فضائل السور، جوامع الدعاء،أذكار بعد الصلاة، أسماء الله الحسنى، الرُّقية الشرعية، الرُّقية الشرعية من القرآن والسن، أدعية للميّت، أدعية للمتوفى، أدعية للمتوفية، أزهر، الأزهر،إفتاء،دار الإفتاء، Azkar, Athkar, Alathkar, Doaa, Muslim daily blessings. Azkar Al Muslim. Athkar Al Muslim">
+  
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>تسابيح - حصن المسلم</title>
+    
+    <!-- الخطوط -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;500;700&display=swap">
+    
+    <style>
+        :root {
+            --primary-dark: #1a2a6c;
+            --accent-gold: #c9a66b;
+            --text-light: #f8f9fa;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --done-bg: rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #2a4858, #1a2a6c);
+            background-attachment: fixed;
+            font-family: 'Tajawal', sans-serif;
+            color: var(--text-light);
+            min-height: 100vh;
+            padding: 20px 10px;
+        }
+
+        /* زر الرجوع للرئيسية */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.05);
+            background: #e0bb7a;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 60px;
+        }
+
+        header h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+        }
+
+        header p {
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        /* حاوية الأذكار */
+        #azkar-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* كرت الذكر */
+        .zekr-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .zekr-card.is-done {
+            opacity: 0.4;
+            filter: grayscale(0.8);
+            transform: scale(0.98);
+        }
+
+        .zekr-body {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .zekr-text {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .zekr-note {
+            background: rgba(201, 166, 107, 0.1);
+            border-right: 4px solid var(--accent-gold);
+            padding: 10px 15px;
+            font-size: 0.95rem;
+            color: #d1d1d1;
+            font-style: italic;
+        }
+
+        /* شريط العداد */
+        .zekr-counter-area {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .counter-badge {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 5px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .reset-btn {
+            background: transparent;
+            border: 1px solid var(--glass-border);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: 0.2s;
+        }
+
+        .reset-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .zekr-text { font-size: 1.2rem; }
+            .back-btn span { display: none; } /* إخفاء النص في الجوال ليبقى الأيقونة */
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://adkarmusliam.github.io/adkarmusliam/" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+        </svg>
+        <span>الرئيسية</span>
+    </a>
+
+    <header>
+        <h1>تسابيح</h1>
+        <p>حصن المسلم</p>
+    </header>
+
+    <main id="azkar-container">
+        <!-- يتم توليد الأذكار هنا بواسطة JavaScript -->
+    </main>
+    <script>
+        const azkarData = [
+   {
+        text: "سُبْحَانَ اللَّهِ",
+        note: "يكتب له ألف حسنة أو يحط عنه ألف خطيئة.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+        note: "حُطَّتْ خَطَايَاهُ وَإِنْ كَانَتْ مِثْلَ زَبَدِ الْبَحْرِ. لَمْ يَأْتِ أَحَدٌ يَوْمَ الْقِيَامَةِ بِأَفْضَلَ مِمَّا جَاءَ بِهِ إِلَّا أَحَدٌ قَالَ مِثْلَ مَا قَالَ أَوْ زَادَ عَلَيْهِ.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ",
+        note: "تملآن ما بين السماوات والأرض.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "سُبْحَانَ اللهِ العَظِيمِ وَبِحَمْدِهِ",
+        note: "غرست له نخلة في الجنة.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ ، سُبْحَانَ اللَّهِ الْعَظِيمِ",
+        note: "ثقيلتان في الميزان حبيبتان إلى الرحمن.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "لَا إلَه إلّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءِ قَدِيرِ.",
+        note: "كانت له عدل عشر رقاب، وكتبت له مئة حسنة، ومحيت عنه مئة سيئة، وكانت له حرزا من الشيطان.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "الْحَمْدُ للّهِ رَبِّ الْعَالَمِينَ",
+        note: "تملأ ميزان العبد بالحسنات.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "لا حَوْلَ وَلا قُوَّةَ إِلا بِاللَّهِ",
+        note: "كنز من كنوز الجنة.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "الْلَّهُم صَلِّ وَسَلِم وَبَارِك عَلَى سَيِّدِنَا مُحَمَّد",
+        note: "من صلى علي حين يصبح وحين يمسى ادركته شفاعتي يوم القيامة.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "أستغفر الله",
+        note: "لفعل الرسول صلى الله عليه وسلم والاقتداء به.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "سُبْحَانَ الْلَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَهَ إِلَّا الْلَّهُ، وَالْلَّهُ أَكْبَرُ",
+        note: "أحب الكلام إلى الله، ومكفرات للذنوب، وغرس الجنة، والْبَاقِيَاتُ الْصَّالِحَات.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "لَا إِلَهَ إِلَّا اللَّهُ",
+        note: "أفضل الذكر لا إله إلاّ الله.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "الْلَّهُ أَكْبَرُ",
+        note: "كتبت له عشرون حسنة وحطت عنه عشرون سيئة. الله أكبر من كل شيء.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "سُبْحَانَ اللَّهِ ، وَالْحَمْدُ لِلَّهِ ، وَلا إِلَهَ إِلا اللَّهُ ، وَاللَّهُ أَكْبَرُ ، اللَّهُمَّ اغْفِرْ لِي ، اللَّهُمَّ ارْحَمْنِي ، اللَّهُمَّ ارْزُقْنِي.",
+        note: "جامعة لخير الدنيا والآخرة.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "الْحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ.",
+        note: "رأى النبي ﷺ اثني عشر ملكاً يبتدرونها أيهم يرفعها.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "اللَّهُ أَكْبَرُ كَبِيرًا ، وَالْحَمْدُ لِلَّهِ كَثِيرًا ، وَسُبْحَانَ اللَّهِ بُكْرَةً وَأَصِيلاً.",
+        note: "عجب لها النبي ﷺ وقال: فُتحت لها أبواب السماء.",
+        maxCount: 100,
+        currentCount: 100
+    },
+    {
+        text: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ , وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ , اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ.",
+        note: "تحط عنه عشر خطايا ويرفع له عشر درجات ويصلي الله عليه عشرا.",
+        maxCount: 100,
+        currentCount: 100
+    }
+        ];
+
+        function renderAzkar() {
+            const container = document.getElementById('azkar-container');
+            container.innerHTML = '';
+            
+            azkarData.forEach((zekr, index) => {
+                const isDone = zekr.currentCount === 0;
+                
+                const card = document.createElement('div');
+                card.className = `zekr-card ${isDone ? 'is-done' : ''}`;
+                card.onclick = () => decrement(index);
+
+                card.innerHTML = `
+                    <div class="zekr-body">
+                        <p class="zekr-text">${zekr.text}</p>
+                        ${zekr.note ? `<div class="zekr-note">${zekr.note}</div>` : ''}
+                    </div>
+                    <div class="zekr-counter-area">
+                        <button onclick="reset(${index}, event)" class="reset-btn">إعادة</button>
+                        <div class="counter-badge">
+                            ${zekr.currentCount}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function decrement(index) {
+            if (azkarData[index].currentCount > 0) {
+                azkarData[index].currentCount--;
+                renderAzkar();
+                // اهتزاز خفيف للموبايل عند النقر
+                if (navigator.vibrate) navigator.vibrate(50);
+            }
+        }
+
+        function reset(index, event) {
+            event.stopPropagation();
+            azkarData[index].currentCount = azkarData[index].maxCount;
+            renderAzkar();
+        }
+
+        renderAzkar();
+    </script>
+</body>
+</html>. 
