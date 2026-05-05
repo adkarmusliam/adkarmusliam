@@ -1,27 +1,36 @@
-<html lang="ar" dir="rtl"><head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
     <meta charset="utf-8">
-<script src="https://pl29340204.profitablecpmratenetwork.com/07/7d/e8/077de874f440136cd266012b59e153f2.js"></script> <script>   atOptions = {     'key' : '3d9a889223f048a222eb0674bc1ec40b',     'format' : 'iframe',     'height' : 60,     'width' : 468,     'params' : {}   }; </script> <script src="https://www.highperformanceformat.com/3d9a889223f048a222eb0674bc1ec40b/invoke.js"></script> 
+    <script src="https://pl29340204.profitablecpmratenetwork.com/07/7d/e8/077de874f440136cd266012b59e153f2.js"></script>
+    <script>
+        atOptions = {
+            'key' : '3d9a889223f048a222eb0674bc1ec40b',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+        };
+    </script>
+    <script src="https://www.highperformanceformat.com/3d9a889223f048a222eb0674bc1ec40b/invoke.js"></script> 
     <meta name="google-site-verification" content="U5z1NNmO6DG2ukr8i__gvr2kgAebAP1R6GQyXPhycEQ" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5372SNJLHR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5372SNJLHR');
-</script>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NMW4CQJD');</script>
-<!-- End Google Tag Manager -->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5372SNJLHR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5372SNJLHR');
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NMW4CQJD');</script>
     <meta name="msvalidate.01" content="BDF71B59508617D3C7E4B3F8017FAECA" />
     <title>أذكار - حصن المسلم</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Tajawal:wght@300;500;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;500;700&display=swap">
     
     <style>
         :root {
@@ -77,10 +86,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding: 1.5rem;
         }
 
-        /* تنسيق الشبكة */
         .grid-container {
             display: grid;
-            /* إنشاء 3 أعمدة متساوية */
             grid-template-columns: repeat(3, 1fr);
             gap: 15px;
         }
@@ -107,7 +114,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transform: translateY(-3px);
         }
 
-        /* الزر الأخير: يمتد على الـ 3 أعمدة كاملة */
         .btn-full {
             grid-column: span 3;
             background: rgba(201, 166, 107, 0.15);
@@ -121,10 +127,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: white;
         }
 
-        /* تحسين العرض على الجوال */
+        /* تنسيق زر الدعم العائم في الزاوية */
+        .support-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px; /* الزاوية اليسرى لأن الموقع RTL */
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border: 2px solid rgba(255,255,255,0.3);
+            z-index: 9999;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .support-float:hover {
+            transform: scale(1.1) rotate(10deg);
+            background: #f8f9fa;
+            color: var(--primary-dark);
+        }
+
         @media (max-width: 600px) {
             .grid-container {
-                /* في الجوال نجعلها صفين (اختياري) أو نحافظ على الـ 3 لضغط المساحة */
                 grid-template-columns: repeat(3, 1fr); 
                 gap: 8px;
             }
@@ -132,10 +164,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 font-size: 0.9rem;
                 padding: 15px 5px;
             }
+            .support-float {
+                width: 55px;
+                height: 55px;
+                bottom: 15px;
+                left: 15px;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
 <body>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMW4CQJD"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header>
         <h1>أذكار</h1>
@@ -145,24 +187,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <main>
         <div class="container-box">
             <div class="grid-container">
-                <!-- الصف الأول (3 أزرار) -->
                 <a href="pages/اذكار_الصباح.html" class="btn">أذكار الصباح</a>
                 <a href="pages/اذكار_المساء.html" class="btn">أذكار المساء</a>
                 <a href="pages/اذكار_بعد_الصلاة.html" class="btn">بعد الصلاة</a>
                 
-                <!-- الصف الثاني (3 أزرار) -->
                 <a href="pages/تسابيح.html" class="btn">تسابيح</a>
                 <a href="pages/اذكار_النوم.html" class="btn">أذكار النوم</a>
                 <a href="pages/اذكار_الاستيقاظ.html" class="btn">الاستيقاظ</a>
                 
-                <!-- الصف الثالث (زر الوضوء لحاله) -->
                 <a href="pages/اذكار_الوضوء.html" class="btn btn-full">أذكار الوضوء</a>
             </div>
         </div>
     </main>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMW4CQJD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-</body></html>
+    <a href="pages/الدعم.html" class="support-float">الدعم</a>
+
+</body>
+</html>
